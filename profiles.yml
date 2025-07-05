@@ -1,0 +1,14 @@
+ae01t01_adv_works_dbt:
+  outputs:
+    dev:
+      dataset: <nome_do_dataset> # sugestão: primeira letra do seu nome + último sobrenome. Exemplo: aoliveira
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: <nome-arquivo-keyfile.json> # nome do arquivo json key gerado para o service account
+      location: us-east1
+      method: service-account
+      priority: interactive
+      project: devdata
+      threads: 1
+      type: bigquery
+  target: dev
